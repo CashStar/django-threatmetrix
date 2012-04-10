@@ -1,0 +1,15 @@
+{% if THREATMETRIX_JS_ENABLED %}
+
+<div id="tmx" style="display:none;">
+    <p style="background:url({{ THREATMETRIX_URL }}/fp/clear.png?org_id={{ THREATMETRIX_ORG_ID }}&amp;session_id={{ THREATMETRIX_SESSION_ID }}&amp;session2={{ THREATMETRIX_SESSION_ID_2 }}&amp;m=1)"></p>
+
+    <img src="{{ THREATMETRIX_URL }}/fp/clear.png?org_id={{ THREATMETRIX_ORG_ID }}&amp;session_id={{ THREATMETRIX_SESSION_ID }}&amp;m=2" alt="" />
+    <script src="{{ THREATMETRIX_URL }}/fp/check.js?org_id={{ THREATMETRIX_ORG_ID }}&amp;session_id={{ THREATMETRIX_SESSION_ID }}" type="text/javascript"></script>
+    <object type="application/x-shockwave-flash" data="{{ THREATMETRIX_URL }}/fp/fp.swf?org_id={{ THREATMETRIX_ORG_ID }}&amp;session_id={{ THREATMETRIX_SESSION_ID }}" width="1" height="1" id="thm_fp">
+        <param name="movie" value="{{ THREATMETRIX_URL }}/fp/fp.swf?org_id={{ THREATMETRIX_ORG_ID }}&amp;session_id={{ THREATMETRIX_SESSION_ID }}" />
+    </object>
+</div>
+
+{% else %}
+<!-- Skipping threatmetrix for this request -->
+{% endif %}
