@@ -6,7 +6,7 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     init file for threatmetrix
-    
+
 """
 import os
 
