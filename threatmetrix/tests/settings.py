@@ -1,4 +1,3 @@
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -10,4 +9,4 @@ INSTALLED_APPS = (
     'threatmetrix'
 )
 
-THREATMETRIX_ORG_ID='test_org_id'
+THREATMETRIX_ORG_ID = 'test_org_id'
